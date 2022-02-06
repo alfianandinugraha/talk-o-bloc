@@ -10,5 +10,13 @@ class QuoteBloc extends Bloc<QuoteEvent, QuoteState> {
         QuoteState(quotes: newQuotes)
       );
     });
+    on<DeleteQuoteEvent>((event, emit) {
+      if (state.quotes.isEmpty) return;
+      var newQuote = [...state.quotes];
+      newQuote.removeLast();
+      return emit(
+        QuoteState(quotes: newQuote)
+      );
+    });
   }
 }

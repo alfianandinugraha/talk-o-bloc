@@ -7,3 +7,5 @@ class AddQuoteEvent extends QuoteEvent {
 
   AddQuoteEvent({required this.quote});
 }
+
+class DeleteQuoteEvent extends QuoteEvent {}
