@@ -18,5 +18,10 @@ class QuoteBloc extends Bloc<QuoteEvent, QuoteState> {
         QuoteState(quotes: newQuote)
       );
     });
+    on<ResetQuoteEvent>((event, emit) {
+      return emit(
+        QuoteState(quotes: [])
+      );
+    });
   }
 }
