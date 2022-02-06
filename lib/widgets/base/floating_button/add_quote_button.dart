@@ -14,6 +14,7 @@ class AddQuoteButton extends StatelessWidget {
       selector: (state) => state.isFull,
       builder: (context, isFull) {
         return FloatingActionButton(
+          heroTag: 'addQuoteButton',
           onPressed: () {
             BlocProvider
               .of<QuoteBloc>(context)

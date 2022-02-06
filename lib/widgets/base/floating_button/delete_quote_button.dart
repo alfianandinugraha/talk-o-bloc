@@ -13,6 +13,7 @@ class DeleteQuoteButton extends StatelessWidget {
       selector: (state) => state.quotes.isEmpty, 
       builder: (context, isEmpty) {
         return FloatingActionButton(
+          heroTag: 'deleteQuoteButton',
           onPressed: () {
             BlocProvider
               .of<QuoteBloc>(context)

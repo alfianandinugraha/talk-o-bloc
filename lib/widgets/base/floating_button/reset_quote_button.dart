@@ -13,6 +13,7 @@ class ResetQuoteButton extends StatelessWidget {
       selector: (state) => state.quotes.isEmpty, 
       builder: (context, isEmpty) {
         return FloatingActionButton(
+          heroTag: 'resetQuoteButton',
           onPressed: () {
             BlocProvider
               .of<QuoteBloc>(context)

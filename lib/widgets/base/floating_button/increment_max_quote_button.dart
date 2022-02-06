@@ -9,6 +9,7 @@ class IncrementMaxQuoteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      heroTag: 'incrementMaxQuoteButton',
       onPressed: () {
         BlocProvider
           .of<QuoteBloc>(context)
