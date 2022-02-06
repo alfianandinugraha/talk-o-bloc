@@ -9,12 +9,13 @@ class ListQuote extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<QuoteBloc, QuoteState>(
-      builder: (context, state) {
+    return BlocSelector<QuoteBloc, QuoteState, List<Quote>>(
+      selector: (state) => state.quotes,
+      builder: (context, quotes) {
         return ListView.builder(
-          itemCount: state.quotes.length,
+          itemCount: quotes.length,
           itemBuilder: (BuildContext context, int position) {
-            Quote quote = state.quotes[position];
+            Quote quote = quotes[position];
             return Card(
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
