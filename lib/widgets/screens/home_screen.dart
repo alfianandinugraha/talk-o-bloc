@@ -26,14 +26,22 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: const [
-          IncrementMaxQuoteButton(),
-          SizedBox(height: 10),
-          ResetQuoteButton(),
-          SizedBox(height: 10),
-          DeleteQuoteButton(),
-          SizedBox(height: 10),
-          AddQuoteButton(),
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "/total");
+            },
+            child: const Icon(Icons.check),
+            heroTag: 'pushToTotalScreen',
+          ),
+          const SizedBox(height: 10),
+          const IncrementMaxQuoteButton(),
+          const SizedBox(height: 10),
+          const ResetQuoteButton(),
+          const SizedBox(height: 10),
+          const DeleteQuoteButton(),
+          const SizedBox(height: 10),
+          const AddQuoteButton(),
         ],
       ),
     );

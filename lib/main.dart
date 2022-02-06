@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:talk_o_bloc/routers/app_router.dart';
 import 'package:talk_o_bloc/store/bloc/quote_bloc.dart';
 import 'package:talk_o_bloc/widgets/base/count.dart';
 import 'package:talk_o_bloc/widgets/base/list_quote.dart';
@@ -14,13 +15,15 @@ void main() {
   runApp(
     BlocProvider(
       create: (BuildContext context) => QuoteBloc(),
-      child: const App(),
+      child: App(),
     )
   );
 }
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  final AppRouter _appRouter = AppRouter();
+
+  App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,8 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const HomeScreen()
+      initialRoute: '/',
+      onGenerateRoute: _appRouter.onGenerateRoute,
     );
   }
 }
