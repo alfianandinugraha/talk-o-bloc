@@ -29,6 +29,14 @@ class HomeScreen extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
+              Navigator.pushNamed(context, "/about");
+            },
+            child: const Icon(Icons.person),
+            heroTag: 'toAboutScreenButton',
+          ),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+            onPressed: () {
               Navigator.pushNamed(context, "/total");
             },
             child: const Icon(Icons.check),
