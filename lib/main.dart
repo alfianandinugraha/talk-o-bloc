@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:talk_o_bloc/models/quote.dart';
 import 'package:talk_o_bloc/store/bloc/quote_bloc.dart';
-import 'package:talk_o_bloc/store/events/quote_event.dart';
-import 'package:talk_o_bloc/widgets/add_quote_button.dart';
 import 'package:talk_o_bloc/widgets/count.dart';
-import 'package:talk_o_bloc/widgets/increment_max_quote_button.dart';
 import 'package:talk_o_bloc/widgets/list_quote.dart';
-import 'package:talk_o_bloc/widgets/delete_quote_button.dart';
-import 'package:talk_o_bloc/widgets/reset_quote_button.dart';
+import 'package:talk_o_bloc/widgets/floating_button/add_quote_button.dart';
+import 'package:talk_o_bloc/widgets/floating_button/increment_max_quote_button.dart';
+import 'package:talk_o_bloc/widgets/floating_button/delete_quote_button.dart';
+import 'package:talk_o_bloc/widgets/floating_button/reset_quote_button.dart';
 
 void main() {
   runApp(
