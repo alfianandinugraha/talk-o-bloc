@@ -11,3 +11,5 @@ class AddQuoteEvent extends QuoteEvent {
 class DeleteQuoteEvent extends QuoteEvent {}
 
 class ResetQuoteEvent extends QuoteEvent {}
+
+class IncrementMaxQuoteEvent extends QuoteEvent {}
