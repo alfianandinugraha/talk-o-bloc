@@ -2,14 +2,14 @@ import 'package:talk_o_bloc/models/quote.dart';
 
 abstract class QuoteEvent {}
 
-class AddQuoteEvent extends QuoteEvent {
+class QuoteAdded extends QuoteEvent {
   Quote quote;
 
-  AddQuoteEvent({required this.quote});
+  QuoteAdded({required this.quote});
 }
 
-class DeleteQuoteEvent extends QuoteEvent {}
+class QuotedDeleted extends QuoteEvent {}
 
-class ResetQuoteEvent extends QuoteEvent {}
+class QuoteReset extends QuoteEvent {}
 
-class IncrementMaxQuoteEvent extends QuoteEvent {}
+class QuoteIncrementedMax extends QuoteEvent {}

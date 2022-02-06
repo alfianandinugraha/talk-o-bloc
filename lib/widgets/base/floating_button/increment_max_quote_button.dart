@@ -13,7 +13,7 @@ class IncrementMaxQuoteButton extends StatelessWidget {
       onPressed: () {
         BlocProvider
           .of<QuoteBloc>(context)
-          .add(IncrementMaxQuoteEvent());
+          .add(QuoteIncrementedMax());
       },
       child: const Icon(Icons.plus_one),
     );

@@ -19,7 +19,7 @@ class AddQuoteButton extends StatelessWidget {
             BlocProvider
               .of<QuoteBloc>(context)
               .add(
-                AddQuoteEvent(
+                QuoteAdded(
                   quote: Quote(text: "Hello world !") 
                 )
               );

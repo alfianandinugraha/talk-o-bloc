@@ -17,7 +17,7 @@ class DeleteQuoteButton extends StatelessWidget {
           onPressed: () {
             BlocProvider
               .of<QuoteBloc>(context)
-              .add(DeleteQuoteEvent());
+              .add(QuotedDeleted());
           },
           child: const Icon(Icons.remove),
           backgroundColor: isEmpty ? Colors.grey : Colors.red,

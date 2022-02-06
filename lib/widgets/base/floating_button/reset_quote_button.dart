@@ -17,7 +17,7 @@ class ResetQuoteButton extends StatelessWidget {
           onPressed: () {
             BlocProvider
               .of<QuoteBloc>(context)
-              .add(ResetQuoteEvent());
+              .add(QuoteReset());
           },
           child: const Icon(Icons.delete),
           backgroundColor: isEmpty ? Colors.grey : Colors.red,
