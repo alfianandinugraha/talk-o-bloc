@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talk_o_bloc/store/bloc/quote_bloc.dart';
 import 'package:talk_o_bloc/widgets/count.dart';
@@ -22,6 +23,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual,
+      overlays: [SystemUiOverlay.bottom]
+    );
+
     return MaterialApp(
       title: 'Talk-o-BLoC',
       theme: ThemeData(
@@ -33,7 +39,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: const [
               Count(),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Expanded(
                 child: ListQuote()
               )
