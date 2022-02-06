@@ -12,12 +12,7 @@ import 'package:talk_o_bloc/widgets/base/floating_button/reset_quote_button.dart
 import 'package:talk_o_bloc/widgets/screens/home_screen.dart';
 
 void main() {
-  runApp(
-    BlocProvider(
-      create: (BuildContext context) => QuoteBloc(),
-      child: App(),
-    )
-  );
+  runApp(App());
 }
 
 class App extends StatelessWidget {
