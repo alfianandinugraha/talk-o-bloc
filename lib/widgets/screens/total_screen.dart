@@ -15,7 +15,19 @@ class TotalScreen extends StatelessWidget {
           Count()
         ],
       ),
-      floatingActionButton: const ResetQuoteButton(),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          const ResetQuoteButton(),
+          const SizedBox(height: 10),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(Icons.arrow_back),
+          )
+        ],
+      ),
     );
   }
 }
