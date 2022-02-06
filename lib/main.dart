@@ -5,6 +5,7 @@ import 'package:talk_o_bloc/store/bloc/quote_bloc.dart';
 import 'package:talk_o_bloc/store/events/quote_event.dart';
 import 'package:talk_o_bloc/widgets/add_quote_button.dart';
 import 'package:talk_o_bloc/widgets/count.dart';
+import 'package:talk_o_bloc/widgets/increment_max_quote_button.dart';
 import 'package:talk_o_bloc/widgets/list_quote.dart';
 import 'package:talk_o_bloc/widgets/delete_quote_button.dart';
 import 'package:talk_o_bloc/widgets/reset_quote_button.dart';
@@ -44,6 +45,8 @@ class MyApp extends StatelessWidget {
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: const [
+            IncrementMaxQuoteButton(),
+            SizedBox(height: 10),
             ResetQuoteButton(),
             SizedBox(height: 10),
             DeleteQuoteButton(),
