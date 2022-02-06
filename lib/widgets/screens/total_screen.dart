@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talk_o_bloc/widgets/base/count.dart';
+import 'package:talk_o_bloc/widgets/base/floating_button/back_screen_button.dart';
 import 'package:talk_o_bloc/widgets/base/floating_button/reset_quote_button.dart';
 
 class TotalScreen extends StatelessWidget {
@@ -17,15 +18,10 @@ class TotalScreen extends StatelessWidget {
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          const ResetQuoteButton(),
-          const SizedBox(height: 10),
-          FloatingActionButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Icon(Icons.arrow_back),
-          )
+        children: const [
+          ResetQuoteButton(),
+          SizedBox(height: 10),
+          BackScreenButton(),
         ],
       ),
     );
