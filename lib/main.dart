@@ -8,18 +8,19 @@ import 'package:talk_o_bloc/widgets/base/floating_button/add_quote_button.dart';
 import 'package:talk_o_bloc/widgets/base/floating_button/increment_max_quote_button.dart';
 import 'package:talk_o_bloc/widgets/base/floating_button/delete_quote_button.dart';
 import 'package:talk_o_bloc/widgets/base/floating_button/reset_quote_button.dart';
+import 'package:talk_o_bloc/widgets/screens/home_screen.dart';
 
 void main() {
   runApp(
     BlocProvider(
       create: (BuildContext context) => QuoteBloc(),
-      child: const MyApp(),
+      child: const App(),
     )
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,32 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: Column(
-            children: const [
-              Count(),
-              SizedBox(height: 5),
-              Expanded(
-                child: ListQuote()
-              )
-            ],
-          ),
-        ),
-        floatingActionButton: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: const [
-            IncrementMaxQuoteButton(),
-            SizedBox(height: 10),
-            ResetQuoteButton(),
-            SizedBox(height: 10),
-            DeleteQuoteButton(),
-            SizedBox(height: 10),
-            AddQuoteButton(),
-          ],
-        ),
-      )
+      home: const HomeScreen()
     );
   }
 }
