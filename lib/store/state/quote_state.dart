@@ -9,4 +9,6 @@ class QuoteState {
   QuoteState copyWith({int max = 0}) {
     return QuoteState(quotes: quotes, max: max);
   }
+
+  bool get isFull => quotes.length >= max;
 }

@@ -11,7 +11,7 @@ class AddQuoteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocSelector<QuoteBloc, QuoteState, bool>(
-      selector: (state) => state.quotes.length >= state.max,
+      selector: (state) => state.isFull,
       builder: (context, isFull) {
         return FloatingActionButton(
           onPressed: () {

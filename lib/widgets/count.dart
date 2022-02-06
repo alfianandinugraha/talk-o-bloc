@@ -8,7 +8,7 @@ class Count extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isFull = context.select<QuoteBloc, bool>((value) => value.state.quotes.length >= value.state.max);
+    var isFull = context.select<QuoteBloc, bool>((value) => value.state.isFull);
     return Column(
       children: [
         const Text("Total"),
